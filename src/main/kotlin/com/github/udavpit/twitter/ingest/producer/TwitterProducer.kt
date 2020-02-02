@@ -10,7 +10,6 @@ import com.twitter.hbc.core.endpoint.StatusesFilterEndpoint
 import com.twitter.hbc.core.processor.StringDelimitedProcessor
 import com.twitter.hbc.httpclient.auth.Authentication
 import com.twitter.hbc.httpclient.auth.OAuth1
-import org.apache.kafka.clients.producer.Callback
 import org.apache.kafka.clients.producer.KafkaProducer
 import org.apache.kafka.clients.producer.ProducerConfig
 import org.apache.kafka.clients.producer.ProducerRecord
@@ -132,4 +131,11 @@ class TwitterProducer {
             }
         }
     }
+}
+
+/**
+ * Run the producer
+ */
+fun main() {
+    TwitterProducer().run()
 }
